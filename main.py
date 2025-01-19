@@ -49,7 +49,7 @@ def get_playlists():
     playlists_info = [(pl['name'], pl['external_urls']['spotify']) for pl in playlists['items']]
     playlists_html = '<br>'.join([f"{name}: {url}" for name, url in playlists_info])
 
-    return playlists_display
+    return playlists_html
 
 @app.route('/logout')
 def logout():
